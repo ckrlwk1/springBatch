@@ -1,0 +1,25 @@
+spring:
+  batch:
+    job:
+      enable: false
+      names: ${job.name:NONE}
+#    jdbc:
+#      initialize-schema: always
+
+
+  db1:
+    datasource :
+      jdbc-url: jdbc:log4jdbc:mysql://localhost:3306/txdb_2nd?serverTimezone=UTC&characterEncoding=UTF8&autoReconnect=true&useSSL=true
+      #tiddb_dev
+
+      #username: xclouddevadmin@sql-cloudgame-dev-mysql
+      #password: 'Xclouddev2020#07'
+      username: xclouddevadmin@sql-cloudgame-dev-mysql
+      password: Xclouddev2020#07
+      driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      poolName: hkr
+      idleTimeout: 100000
+      minimumIdle: 10
+      maximumPoolSize: 10
+      connectionTimeout: 9000
+      maxLifetime: 110000
